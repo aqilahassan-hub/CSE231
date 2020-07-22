@@ -72,10 +72,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(40,130)" to="(40,190)"/>
     <wire from="(400,190)" to="(440,190)"/>
     <wire from="(500,210)" to="(540,210)"/>
-    <comp lib="0" loc="(220,130)" name="Pin">
+    <comp lib="0" loc="(40,130)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="C"/>
+      <a name="label" val="A"/>
     </comp>
     <comp loc="(500,200)" name="OR IC"/>
     <comp lib="0" loc="(130,130)" name="Pin">
@@ -83,19 +83,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="0" loc="(40,130)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
-    </comp>
     <comp loc="(290,280)" name="NOT IC">
       <a name="labelfont" val="Segoe UI Black bold 14"/>
     </comp>
-    <comp loc="(400,170)" name="AND IC"/>
     <comp lib="0" loc="(540,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(400,170)" name="AND IC"/>
+    <comp lib="0" loc="(220,130)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C"/>
     </comp>
   </circuit>
   <circuit name="AND IC">
@@ -106,6 +106,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <appear>
       <path d="M78,56 Q82,66 86,56" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="109" stroke="#000000" stroke-width="2" width="63" x="50" y="55"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="57" y="74">1</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="59" y="94">2</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="100" y="94">3</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="59" y="135">4</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="58" y="154">5</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="99" y="135">6</text>
       <circ-port height="8" pin="160,220" width="8" x="46" y="66"/>
       <circ-port height="8" pin="160,260" width="8" x="46" y="86"/>
       <circ-port height="8" pin="160,320" width="8" x="46" y="126"/>
@@ -130,39 +136,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,340)" to="(380,340)"/>
     <wire from="(460,240)" to="(500,240)"/>
     <wire from="(460,340)" to="(500,340)"/>
-    <comp lib="1" loc="(310,340)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(460,340)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(460,240)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(500,340)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(310,240)" name="NAND Gate">
+    <comp lib="1" loc="(460,340)" name="NAND Gate">
       <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(500,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(160,360)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(160,220)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(160,260)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(160,320)" name="Pin">
       <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(310,240)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(160,360)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(500,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(460,240)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(160,220)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(310,340)" name="NAND Gate">
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
   <circuit name="OR IC">
@@ -173,6 +179,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <appear>
       <path d="M125,47 Q129,57 133,47" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="98" stroke="#000000" stroke-width="2" width="58" x="101" y="46"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="134">5</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="114">4</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="85">2</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="150" y="85">3</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="149" y="124">6</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="61">1</text>
       <circ-port height="8" pin="140,160" width="8" x="96" y="56"/>
       <circ-port height="8" pin="140,260" width="8" x="96" y="76"/>
       <circ-port height="8" pin="140,320" width="8" x="96" y="106"/>
@@ -215,27 +227,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(300,190)" to="(310,190)"/>
     <wire from="(300,390)" to="(310,390)"/>
     <wire from="(300,350)" to="(310,350)"/>
-    <comp lib="1" loc="(280,160)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(140,420)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,260)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,160)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(280,320)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(140,320)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(280,260)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="1" loc="(370,370)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
@@ -247,13 +238,34 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(280,420)" name="NAND Gate">
+    <comp lib="1" loc="(280,260)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(280,160)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(140,320)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(140,160)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(280,320)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(400,370)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,260)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(140,420)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(280,420)" name="NAND Gate">
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
   <circuit name="NOT IC">
@@ -264,6 +276,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <appear>
       <path d="M112,95 Q116,105 120,95" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="77" stroke="#000000" stroke-width="2" width="53" x="89" y="94"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="98" y="114">1</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="130" y="125">2</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="100" y="155">3</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="131" y="155">4</text>
       <circ-port height="8" pin="240,310" width="8" x="86" y="106"/>
       <circ-port height="8" pin="240,380" width="8" x="86" y="146"/>
       <circ-port height="10" pin="470,310" width="10" x="135" y="115"/>
@@ -282,27 +298,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(430,380)" to="(470,380)"/>
     <wire from="(240,310)" to="(340,310)"/>
     <wire from="(240,380)" to="(340,380)"/>
-    <comp lib="1" loc="(430,310)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(240,310)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="1" loc="(430,380)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
+    <comp lib="0" loc="(470,380)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(470,310)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="1" loc="(430,310)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
     <comp lib="0" loc="(240,380)" name="Pin">
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(470,380)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
